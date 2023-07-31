@@ -31,6 +31,6 @@ for(let nome of nomes){
 }
 console.log('---------------')
 for(let nome in nomes){
-    console.log(nome)
+    console.log(nome);  
 }
 
