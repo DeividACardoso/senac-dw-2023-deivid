@@ -1,12 +1,12 @@
-// let prompt = require('prompt-sync')();
+let prompt = require('prompt-sync')();
 
-// let curso = prompt('Qual o nome do seu curso? ');
-// console.log('Curso: ' + curso);
+let curso = prompt('Qual o nome do seu curso? ');
+console.log('Curso: ' + curso);
 
-// let fase = Number(prompt('Informe a fase: '));
-// console.log(fase + 'a Fase');
+let fase = Number(prompt('Informe a fase: '));
+console.log(fase + 'a Fase');
 
-// console.log("Batata");
+console.log("Batata");
 
 let carroA = {fabricante:'Ford', modelo:'Mustang', ano:1969};
 let carroB = {fabricante:'Porsche', modelo:'Macan', ano:2023};
@@ -33,4 +33,16 @@ console.log('---------------')
 for(let nome in nomes){
     console.log(nome);  
 }
+
+let sol = true;
+let vento = false;
+
+// if(sol === true && vento === false){
+//     console.log('Vou a praia!');
+// } else {
+//     console.log('Não vou a praia!');
+// }
+
+let mensagem = (sol && !vento ? 'Vou a praia!' : 'Não vou a praia');
+console.log(mensagem);
 
