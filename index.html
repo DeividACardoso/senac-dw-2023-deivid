@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+        <!-- Configurações, importações, scripts, etc. -->
+    <head>
+        <title>Consulta de Endereços</title>
+        <script src="/js/consultaviacep.js"></script>
+    </head>
+    <body>
+        <div id="divDeTudo" style="font-size: 20px; ">
+            <div>
+                <label>Informe o CEP:</label>
+                <input type="text" id="txtCep" onblur="buscarCep()"><br>
+            </div>
+        <!-- TODO Preencher o resultado da consulta de CEP -->
+        <!-- Um campo no HTML por atru=ibuto do JSON resultante -->
+            <div>
+                <label>Bairro:</label>
+                <input type="text" id="txtBairro" disabled>
+            </div>
+            <div>
+                <label>Localidade:</label>
+                <input type="text" id="txtLocalidade" disabled>
+            </div>
+            <div>
+                <label>Logradouro:</label>
+                <input type="text" id="txtLogradouro" disabled>
+            </div>
+            <div>
+                <label>UF:</label>
+                <input type="text" id="txtUf" disabled>
+            </div>
+        </div>
+    </body>
+</html>
