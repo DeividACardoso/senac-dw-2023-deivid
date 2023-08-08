@@ -1,0 +1,37 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+label {
+    display: inline-block;
+    width: 5%;
+    text-align: right;
+}
+
+input {
+    display: inline-block;
+}
+
+h1{
+    display: inline-block;
+    padding-left: 10px;
+    text-align: right;
+}
+
+p{
+    padding-left: 10px;
+}
+
+body{
+    margin: auto;
+    background-color: antiquewhite;
+}
+
+fieldset{
+    background-color: aliceblue;
+}
+
+div{
+  margin: auto;
+  width: auto;
+}

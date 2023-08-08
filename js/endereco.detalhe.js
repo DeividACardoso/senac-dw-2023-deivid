@@ -1,4 +1,4 @@
-async function consultaviaCEP(){
+async function buscarCEP(){
     limpar();
     var cepInformado = document.getElementById('cep').value;
     cepInformado = cepInformado.replace('-', '');
@@ -40,7 +40,6 @@ function preencherCamposComJSON(json){
 }
 
 function limpar(){
-    formulario.style = 'background-color: aqua';
     rua.value = '';
     bairro.value = '';
     cidade.value = '';
@@ -53,18 +52,13 @@ function limpar(){
 
 function mostrarTelaErro(){
     limpar();
-    formulario.style = 'background-color: red';
     alert('CEP informado não existe');
 }
 
 function validarCEP(cepFormatado){
-    var fieldsetCep = document.getElementById('fieldset-consulta-cep');
     var cepValido = false;
     if(cepFormatado.length == 8){
-        fieldsetCep.style = 'background-color: purple';
         cepValido = true;
-    }else{
-        fieldsetCep.style = 'background-color: orange';
     }
 
     return cepValido;
