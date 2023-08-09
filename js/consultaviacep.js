@@ -3,7 +3,6 @@ async function consultaviaCEP(){
     var cepInformado = document.getElementById('cep').value;
     cepInformado = cepInformado.replace('-', '');
 
-<<<<<<< HEAD
     var txtCep = document.getElementById('txtCep');
     var cepInformado = txtCep.value;
     
@@ -23,49 +22,13 @@ function preencherCamposComJson(json){
         txtBairro.value = json.bairro;
     }else{
         txtBairro.disabled = false;
-=======
-    var cepValido = validarCEP(cepInformado);
-    if(cepValido){
-        fetch(`https://viacep.com.br/ws/${cepInformado}/json/`)
-        .then(resultado => resultado.json())
-        .then(json => {
-            if(json.erro){
-                mostrarTelaErro();
-            }else{
-                preencherCamposComJSON(json);
-            }
-        })
-        .catch(erro => {
-            mostrarTelaErro();
-        })
->>>>>>> 7c93c101872dc03fab06920d3adfcc0590fb3202
     }
 }
 
-<<<<<<< HEAD
 function mostrarTelaDeErro(){
     limpar();
     document.getElementById('divDeTudo').style.backgroundColor = "red";
     alert('CEP informado não existe')
-=======
-function preencherCamposComJSON(json){
-    if(json.bairro){ 
-        bairro.value = json.bairro;
-    }else{
-        bairro.disabled = false;
-    }
-
-    if(json.logradouro){ 
-        rua.value = json.logradouro;
-    }else{
-        rua.disabled = false;
-    }
-
-    estado.value = json.uf;
-    cidade.value = json.localidade;
-    cidade.disabled = true;
-    estado.disabled = true;
->>>>>>> 7c93c101872dc03fab06920d3adfcc0590fb3202
 }
 
 function limpar(){
