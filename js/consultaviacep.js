@@ -19,15 +19,10 @@ async function buscarCep(){
     fetch('https://viacep.com.br/ws/' + cepInformado + '/json')
     .then(resultado => resultado.json())
     .then(json => {
-        if(json.erro){
-            limpar();
-            mostrarTelDeErro();
-        } else {
             preencherCamposComJson(json);
-        }
     })
     .catch(erro => {
-        mostrarTelDeErro();
+        mostrarTelaDeErro();
     })
 }
 
@@ -42,7 +37,7 @@ function preencherCamposComJson(json){
     txtUf.value = json.uf;
 }
 
-function mostrarTelDeErro(){
+function mostrarTelaDeErro(){
     limpar();
     document.getElementById('divDeTudo').style.backgroundColor = "red";
     alert('CEP informado não existe')
