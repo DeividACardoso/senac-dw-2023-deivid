@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/endereco.detalhe.js"></script>
+        <link rel="stylesheet" href="css/brincando.css">
+    </head>
+    <body>
+        <header class="cabecalho">
+            <h1 class="cabecalho__titulo">Brincando com CSS/HTML</h1>
+            <p class="cabecalho__texto">Informe os dados do seu endereço.</p>
+        </header>
+        <main class="principal">
+            <section class="section__menu">
+                <aside class="section__menu__aside">
+                    <p class="section__menu__aside__titulo"><a href="/index.html">Voltar ao início</a></p>
+
+                </aside>
+            </section>
+
+            <section class="section__principal">
+                <form class="formulario" id="formulario">
+                    <div>
+                        <fieldset class="formulario__fieldset" id="fieldset-consulta-cep">
+                            <legend class="formulario__legenda">Consulta de CEP</legend>
+                            <div>
+                                <label class="formulario__fieldset__texto">Informe o CEP:</label>
+                                <input class="formulario__fieldset__input__descricao" type="text" id="cep" minlength="8" required></input>
+                            </div>
+                            <div>
+                                <label class="formulario__fieldset__texto"></label>
+                                <button class="formulario__fieldset__botao" type="button" onclick="buscarCEP()">Buscar CEP</button>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <fieldset class="formulario__fieldset">
+                            <legend class="formulario__legenda">Endereço:</legend>
+                            <div>
+                                <label class="formulario__texto" for="rua">Rua:</label>
+                                <input class="formulario__fieldset__input__descricao" type="text" id="rua" name="rua" minlength="3" required/>    
+                            </div>
+
+                            <div>
+                                <label class="formulario__texto" for="bairro">Bairro:</label>
+                                <input class="formulario__fieldset__input__descricao" type="text" id="bairro" name="bairro" required/>    
+                            </div>
+        
+                            <div>
+                                <label class="formulario__texto" for="cidade">Cidade:</label>
+                                <input class="formulario__fieldset__input__descricao" type="text" id="cidade" name="cidade" required/>    
+                            </div>
+
+                            <div>
+                                <label class="formulario__texto" for="estado">Estado:</label>
+                                <input class="formulario__fieldset__input__descricao" type="text" id="estado" name="estado" required/>    
+                            </div>
+
+                            <div>
+                                <label class="formulario__texto" for="estado">Número:</label>
+                                <input class="formulario__fieldset__input__descricao" type="text" id="numero" name="numero" required/>    
+                            </div>
+                            <div>
+                                <label class="formulario__texto"></label>
+                                <input class="formulario__fieldset__botao" id="botao" type="submit" value="Cadastrar"/>  
+                            </div>
+
+                        </fieldset>
+                    </div>
+                </form>
+            </section>
+        </main>
+        <footer class="rodape">
+            <p class="rodape__texto">Dev Deivid Alves Cardoso</p>
+        </footer>
+    </body>
+</html>

@@ -1,5 +1,6 @@
 *{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header{
@@ -7,15 +8,16 @@ header{
 }
 
 label {
+    width: 125px;
     text-align: left;
     clear: both;
     float:left;
+    color: rgb(0, 0, 0);
 }
 
-input {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+input{
+    border-radius: 3px;
+    border: none;
 }
 
 input[type=submit], input[type=button]{
@@ -23,14 +25,16 @@ input[type=submit], input[type=button]{
   border: none;
   border-radius: 3px;
   color: rgb(0, 0, 0);
-  padding: 5px 7px;
+  padding: 3px;
   text-decoration: none;
-  margin: auto;
   float: none;
+  width: 300px;
+  margin-top: 10px;
 }
 
-
 h1{
+    font-weight: bolder;
+    font-style: italic;
     text-align: center;
 }
 
@@ -41,22 +45,13 @@ p{
 
 body{
     margin: auto;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(86, 164, 236);
 }
 
 fieldset{
-    border-color: gold;
+    border-color: rgba(0, 195, 255, 0.267);
     width: fit-content;
     margin: auto;
-    background-color: rgb(175, 145, 204);
+    background-color: rgba(72, 81, 204, 0.521);
     border-radius: 5%;
-}
-
-div{
-  margin: auto;
-  width: auto;
-}
-
-button{
-    margin: auto;
 }
