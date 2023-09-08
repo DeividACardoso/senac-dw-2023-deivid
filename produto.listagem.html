@@ -13,38 +13,40 @@
         </header>
         <main class="principal">
             <section>
-                <div>
-                    <label for="nome">Nome: </label>
-                    <input type="text" id="nome" name="nome"></input>
-                </div>
-
-                <div>
-                    <label for="cnpj">CNPJ: </label>
-                    <input type="text" id="cnpj" name="cnpj"></input>
-                </div>
-
-                <div>
-                    <label for="valorMin">Valor Mínimo: </label>
-                    <input type="text" id="valorMin" name="valorMin"></input>
-                </div>
-
-                <div>
-                    <label for="valorMax">Valor Máximo: </label>
-                    <input type="text" id="valorMax" name="valorMax"></input>
-                </div>
-
-                <div>
-                    <label for="pesoMin">Peso Mínimo: </label>
-                    <input type="text" id="pesoMin" name="pesoMin"></input>
-                </div>
-
-                <div>
-                    <label for="pesoMax">Peso Máximo: </label>
-                    <input type="text" id="pesoMax" name="pesoMax"></input>
-                </div>
-
-                <div>
-                    <input type="button" value="Enviar" id="botaoEnviar" name="botaoEnviar" onclick="buscarProdutosComFiltros()"></input>
+                <div class="form__group field">
+                    <div>
+                        <label for="nome" class="form_label">Nome: </label>
+                        <input type="input" id="nome" name="nome" class="form_field" placeholder="Nome"></input>
+                    </div>
+    
+                    <div>
+                        <label for="cnpj" class="form_label">CNPJ: </label>
+                        <input type="input" id="cnpj" name="cnpj" class="form_field" placeholder="CNPJ"></input>
+                    </div>
+    
+                    <div>
+                        <label for="valorMin" class="form_label">Valor Mínimo: </label>
+                        <input type="input" id="valorMin" name="valorMin" class="form_field" placeholder="Valor Mínimo"></input>
+                    </div>
+    
+                    <div>
+                        <label for="valorMax" class="form_label">Valor Máximo: </label>
+                        <input type="input" id="valorMax" name="valorMax" class="form_field" placeholder="Valor Máximo"></input>
+                    </div>
+    
+                    <div>
+                        <label for="pesoMin" class="form_label">Peso Mínimo: </label>
+                        <input type="input" id="pesoMin" name="pesoMin" class="form_field" placeholder="Peso Mínimo"></input>
+                    </div>
+    
+                    <div>
+                        <label for="pesoMax" class="form_label">Peso Máximo: </label>
+                        <input type="input" id="pesoMax" name="pesoMax" class="form_field" placeholder="Peso Máximo"></input>
+                    </div>
+    
+                    <div>
+                        <input type="button" value="Enviar" id="botaoEnviar" name="botaoEnviar" onclick="buscarProdutosComFiltros()"></input>
+                    </div>
                 </div>
 
             </section>
