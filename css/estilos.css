@@ -1,15 +1,6 @@
 /* Importação de fonte */
 @import url("https://fonts.googleapis.com/css2?family=Kalam&family=Lato:wght@700&display=swap");
 
-/* 
-Referências:
-https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
-https://www.alura.com.br/artigos/css-guia-do-flexbox
-https://desenvolvimentoparaweb.com/css/bem/
-*/
-
-
-
 *{
     font-family: 'Courier New', Courier, monospace;
 }
@@ -18,11 +9,20 @@ https://desenvolvimentoparaweb.com/css/bem/
 :root{
     --fonte-titulo: "Lato", sans-serif;
     --fonte-texto: "Kalam", cursive;
-    --cor-fundo: black;
+    --cor-fundo: rgb(32, 31, 32);
     --cor-fonte: #F1F6F9;
     --cor-menu: #394867;
     --cor-borda: #394867;
 }
+
+  
+.center {
+    margin: 0;
+    position: absolute;
+    -ms-transform: translate(50%, 50%);
+    transform: translate(0%, 50%);
+}
+
 
 body {
     background: var(--cor-fundo);
@@ -42,25 +42,22 @@ body {
 .cabecalho__titulo{
     font-family: var(--fonte-titulo);
     font-weight: 700;
-    text-shadow: 1px 1px 1px black;
 }
 
 .cabecalho__texto{
     font-family: var(--fonte-texto);
     font-weight: 400;
-    text-shadow: 1px 1px 1px black;
 }
 
 h2 {
     font-family: var(--fonte-titulo);
     color: white;
-    text-shadow: 1px 1px 1px black;
     text-align: center;
     padding-top: 30px;
 }
 
 .principal{
-    height: 75vh; /* Equivale a 75% da altura da tela (viewport-height)*/
+    height: 75vh; 
     padding: 0px;
     margin: 0px;
     display: flex;
@@ -92,17 +89,30 @@ a {
 }
 
 .section__principal{
-    width: 100%;
+    position: absolute;
+    top: 25%;
+    width: 90%;
     border: 1px solid rgb(255, 255, 255);
     padding: 20px 10px 10px 10px;
     margin: 5px;
 }
 
+.section__campos{
+    height: 10%;
+    padding: 10px;
+}
+
 div {
-    display: flexbox;
-    align-items: center;
-    justify-content: center;
+    display: table-cell;
     padding: 3px;
+}
+
+.botaoEnviar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 3px solid rgb(255, 255, 255); 
 }
 
 .formulario{
@@ -117,7 +127,7 @@ div {
 }
 
 .formulario__texto{
-    display: block;
+    display: inline-block;
     font-family: var(--fonte-texto);
     font-weight: 400;
     width: 120px;
@@ -185,7 +195,10 @@ section{
 }
 
 table{
+    display: flexbox;
     text-align: center;
+    align-self: center;
+    padding: 3px;
     border-width: 2px;
     border: #F1F6F9;
 }
@@ -193,70 +206,5 @@ table{
 input{
     display: block;
     align-items: center;
-}
-
-#botaoEnviar{
-    display: block;
-    align-items: center;
     padding: 3px;
-}
-
-.form__group {
-  position: relative;
-  padding: 15px 0 0;
-  margin-top: 10px;
-  width: 50%;
-}
-
-.form__field {
-  font-family: inherit;
-  width: 100%;
-  border: 0;
-  border-bottom: 2px solid gray;
-  outline: 0;
-  font-size: 1.3rem;
-  color: white;
-  padding: 7px 0;
-  background: transparent;
-  transition: border-color 0.2s;
-
-  &::placeholder {
-    color: transparent;
-  }
-
-  &:placeholder-shown ~ .form__label {
-    font-size: 1.3rem;
-    cursor: text;
-    top: 20px;
-  }
-}
-
-.form__label {
-  position: absolute;
-  top: 0;
-  display: block;
-  transition: 0.2s;
-  font-size: 1rem;
-  color: gray;
-}
-
-.form__field:focus {
-  ~ .form__label {
-    position: absolute;
-    top: 0;
-    display: block;
-    transition: 0.2s;
-    font-size: 1rem;
-    color: white;
-    font-weight:700;    
-  }
-  padding-bottom: 6px;  
-  font-weight: 700;
-  border-width: 3px;
-  border-image: linear-gradient(to right, white, gray);
-  border-image-slice: 1;
-}
-/* reset input */
-.form__field{
-  &:required,&:invalid { box-shadow:none; }
 }
