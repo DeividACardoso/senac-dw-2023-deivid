@@ -49,6 +49,9 @@ function preencherTabela(jsonProdutos){
         let celulaFabricante = novaLinha.insertCell();
         celulaFabricante.innerText = jsonProdutos[i].fabricante.nome;
 
+        let celulaCnpjFabricante = novaLinha.insertCell();
+        celulaCnpjFabricante.innerText = jsonProdutos[i].fabricante.cnpj;
+
         let celulaValor = novaLinha.insertCell();
         celulaValor.innerText = 'R$' + jsonProdutos[i].valor;
 

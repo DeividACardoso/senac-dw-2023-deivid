@@ -15,12 +15,12 @@
     --cor-borda: #394867;
 }
 
-  
+
 .center {
     margin: 0;
     position: absolute;
     -ms-transform: translate(50%, 50%);
-    transform: translate(0%, 50%);
+    transform: translate(0%, 30%);
 }
 
 
@@ -92,7 +92,7 @@ a {
     position: absolute;
     top: 25%;
     width: 90%;
-    border: 1px solid rgb(255, 255, 255);
+    /* border: 1px solid rgb(255, 255, 255); */
     padding: 20px 10px 10px 10px;
     margin: 5px;
 }
@@ -103,7 +103,70 @@ a {
 }
 
 div {
+    width: 75%;
+    align-items: baseline;
     display: table-cell;
+    padding: 6px;
+}
+
+.div__campos{
+    width: 75%;
+    position: relative;
+}
+
+section{
+    text-align: center;
+    border-width: 2px;
+    border: #F1F6F9;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #303030;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    overflow: scroll;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+thead th:nth-child(1) {
+    width: 5%;
+}
+
+thead th:nth-child(2) {
+    width: 30%;
+}
+
+thead th:nth-child(3) {
+    width: 25%;
+}
+
+thead th:nth-child(4) {
+    width: 13%;
+}
+
+thead th:nth-child(5) {
+    width: 10%;
+}
+
+thead th:nth-child(6) {
+    width: 10%;
+}
+
+input{
+    display: block;
+    align-items: center;
     padding: 3px;
 }
 
@@ -188,23 +251,3 @@ div {
     font-size: 14px;
 }
 
-section{
-    text-align: center;
-    border-width: 2px;
-    border: #F1F6F9;
-}
-
-table{
-    display: flexbox;
-    text-align: center;
-    align-self: center;
-    padding: 3px;
-    border-width: 2px;
-    border: #F1F6F9;
-}
-
-input{
-    display: block;
-    align-items: center;
-    padding: 3px;
-}

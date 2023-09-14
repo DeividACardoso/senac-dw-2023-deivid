@@ -19,34 +19,34 @@
                         <input type="input" id="nome" name="nome" class="form_field" placeholder="Nome"></input>
                     </div>
     
-                    <div>
+                    <div class="div__campos">
                         <label for="cnpj" class="form_label">CNPJ: </label>
                         <input type="input" id="cnpj" name="cnpj" class="form_field" placeholder="CNPJ"></input>
                     </div>
     
-                    <div>
+                    <div class="div__campos">
                         <label for="valorMin" class="form_label">Valor Mínimo: </label>
                         <input type="input" id="valorMin" name="valorMin" class="form_field" placeholder="Valor Mínimo"></input>
                     </div>
     
-                    <div>
+                    <div class="div__campos">
                         <label for="valorMax" class="form_label">Valor Máximo: </label>
                         <input type="input" id="valorMax" name="valorMax" class="form_field" placeholder="Valor Máximo"></input>
                     </div>
     
-                    <div>
+                    <div class="div__campos">
                         <label for="pesoMin" class="form_label">Peso Mínimo: </label>
                         <input type="input" id="pesoMin" name="pesoMin" class="form_field" placeholder="Peso Mínimo"></input>
                     </div>
     
-                    <div>
+                    <div class="div__campos">
                         <label for="pesoMax" class="form_label">Peso Máximo: </label>
                         <input type="input" id="pesoMax" name="pesoMax" class="form_field" placeholder="Peso Máximo"></input>
                     </div>
                     
                     <div class="container">
                         <div class="center">
-                            <input type="button" value="Enviar" id="botaoEnviar" name="botaoEnviar" onclick="buscarProdutosComFiltros()"></input>
+                            <input type="button" value="Pesquisar" id="botaoEnviar" name="botaoEnviar" onclick="buscarProdutosComFiltros()"></input>
                         </div>
                     </div>
                 </div>
@@ -55,11 +55,12 @@
             <section class="section__principal">
                 <table>
                     <thead>
-                        <th>#</th>
-                        <th>Nome</th>
-                        <th>Fabricante</th>
-                        <th>Valor (R$)</th>
-                        <th>Peso (kg)</th>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome </th>
+                        <th scope="col">Fabricante </th>
+                        <th scope="col">CNPJ Fabricante </th>
+                        <th scope="col">Valor(R$) </th>
+                        <th scope="col">Peso(kg)</th>
                     </thead>
                     <tbody id="corpoTabela">
                         
