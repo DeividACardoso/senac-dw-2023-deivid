@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <script src="./fornecedor.cadastro.js"></script>
+        <link rel="stylesheet" href="estilos.css">
+        <title>Cadastro de Fornecedores</title>
+    </head>
+    <body>
+        <header class="cabecalho">
+            <h1 class="cabecalho__titulo">Cadastro de Fornecedor</h1>
+        </header>
+        <main class="principal">
+            <section class="section__campos"></section>
+            <div class="campos__cadastro">
+                <div class="div__campos">
+                    <label for="nome">Nome: </label>
+                    <input type="input" id="nome_input"></input>
+                </div>
+                <div class="div__campos">
+                    <label for="cnpj">CNPJ: </label>
+                    <input type="input" id="cnpj_input"></input>
+                </div>
+                <div class="div__campos">
+                    <label for="cep">CEP: </label>
+                    <input type="input" onblur="consultaViaCep()" id="cep_input"></input>
+                </div>
+                <div class="div__campos">
+                    <label for="cidade">Cidade: </label>
+                    <input type="input" id="cidade_input" disabled></input>
+                </div>
+                <div class="div__campos">
+                    <label for="uf">UF: </label>
+                    <input type="input" id="uf_input" disabled></input>
+                </div>
+                <div class="container">
+                    <div class="center">
+                        <input type="button" value="Cadastrar" id="botaoEnviar" name="botaoEnviar" onclick="cadastrarFornecedor()"></input>
+                    </div>
+                </div>
+            </div>
+            </div>
+            </section>
+
+            <section class="section__principal">
+                <table>
+                    <thead>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome </th>
+                        <th scope="col">CNPJ </th>
+                        <th scope="col">CEP </th>
+                        <th scope="col">Cidade </th>
+                        <th scope="col">UF</th>
+                    </thead>
+                    <tbody id="corpoTabela">
+                        
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </body>
+</html>
