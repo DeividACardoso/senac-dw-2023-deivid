@@ -99,7 +99,6 @@ a {
 
 .section__campos{
     height: 10%;
-    padding: 10px;
 }
 
 div {
@@ -179,7 +178,9 @@ input{
 }
 
 .formulario{
-    padding-top: 30px;
+    display: flexbox;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .formulario__fieldset{
