@@ -1,39 +1,66 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="card">
-        <div class="card-header">
-          <h3>Lista de Produtos</h3>
+  <div class="has-bg-img">
+    <div class="bg-img bg-cover img-fluid" style="background-image: url('https://i.imgur.com/WFbPLt7.jpeg')">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="card bg-dark border border-secondary">
+            <div class="card-header bg-dark text-white">
+              <h5>Filtros</h5>
+            </div>
+            <div class="card-body card-info">
+              <form class="row">
+                <div class="form-group col-md-6">
+                  <label for="nome" class="text-white">Nome</label>
+                  <input class="form-control" name="nome" [(ngModel)]="seletor.nome">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="nomeFabricante" class="text-white">Fabricante</label>
+                  <input class="form-control" name="nomeFabricante" [(ngModel)]="seletor.nomeFabricante">
+                </div>
+                <br>
+                <div class="form-group">
+                  <button type="sumbit" class="form-control btn btn-primary mb-3" (click)="pesquisar()">Pesquisar a</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="card-body">
-          <div class="table-responsive">
+      </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="card bg-dark border border-secondary">
+          <div class="card-header ">
+            <h3 class="text-white">Lista de Produtos</h3>
+          </div>
+          <div class="card-body ">
             <div class="table-responsive">
-                <table class="table table-responsive">
-                  <thead>
-                    <tr>
-                      <th scope="col">Id</th>
-                      <th scope="col">Nome</th>
-                      <th>Ações</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let p of produtos">
-                      <td>{{ p.id }}</td>
-                      <td>{{ p.nome }}</td>
-                      <td>
-                        <button ngbTooltip="Editar"
-                                class="btn btn-xs btn-info"
-                                (click)="editar(p.id)">Editar
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="table-responsive">
+                  <table class="table table-responsive table-striped table-dark table-hover text-white">
+                    <thead>
+                      <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nome</th>
+                        <th>Ações</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let p of produtos">
+                        <td>{{ p.id }}</td>
+                        <td>{{ p.nome }}</td>
+                        <td>
+                          <button ngbTooltip="Editar"
+                                  class="btn btn-xs btn-info"
+                                  (click)="editar(p.id)">Editar
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
+  </div>
