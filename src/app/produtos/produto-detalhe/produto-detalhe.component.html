@@ -1,0 +1,52 @@
+<div class="has-bg-img">
+  <div class="bg-img bg-cover img-fluid" style="background-image: url('https://i.imgur.com/WFbPLt7.jpeg'); height: 100vh;">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 pt-2">
+          <div class="card bg-dark border border-secondary" style="height: 40vh;">
+            <div class="card-header bg-dark text-white">
+              <h5>Cadastro</h5>
+            </div>
+            <div class="card-body card-info">
+              <form class="row alight-items-start">
+                <div class="row">
+                  <div class="form-group col col-md-6">
+                    <label for="nome" class="text-white">Nome</label>
+                    <input class="form-control" name="nome" [(ngModel)]="produto.nome">
+                  </div>
+                  <div class="form-group col col-md-6">
+                    <label for="nomeFabricante" class="text-white">Fabricante</label>
+                    <select class="form-select" name="fabricanteDoProduto"
+                    [ngModelOptions]="{standalone: true}"
+                    aria-label="Seleciona Um fabricante"
+                    [compareWith]="CompareById"
+                    [(ngModel)]="produto.fabricanteDoProduto">
+                    <option *ngFor="let fabricante of fabricantes" [ngValue]="fabricante">{{fabricante.nome}}</option>
+                  </select>
+                  <div class="form-group col col-md-6">
+                    <label for="peso" class="text-white">Peso(Kg)</label>
+                    <input class="form-control" name="peso"
+                    [(ngModel)]="produto.peso">
+                  </div>
+                  <div class="form-group col col-md-6">
+                    <label for="valor" class="text-white">Valor(R$)</label>
+                    <input class="form-control" name="valor">
+                  </div>
+                  <div class="row">
+                    <div class="form-group col col-md-4">
+                    </div>
+                    <div class="form-group col col-md-4">
+                    </div>
+                    <div class="form-group col pt-4 pl-4 col-md-4 ">
+                      <button type="sumbit" class="form-control btn btn-primary">Cadastrar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
