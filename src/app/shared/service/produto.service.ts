@@ -21,4 +21,20 @@ export class ProdutoService {
   listarTodosComFiltro(seletor: ProdutoSeletor): Observable<Array<Produto>>{
     return this.httpClient.post<Array<Produto>>(this.API+'/filtro', seletor);
   }
+
+  salvar(produto: Produto): Observable<Produto> {
+    return this.httpClient.post<Produto>(this.API, produto);
+  }
+
+  pesquisarPorId(id: number){
+    return this.httpClient.get<Produto>(this.API + '/' + id);
+  }
+
+  atualizar(produto: Produto): Observable<Produto>{
+    return this.httpClient.post<Produto>(this.API, produto)
+  }
+
+  excluir(id: number): Observable<Produto>{
+    return this.httpClient.delete<Produto>(this.API + "/deletar-por-id/" + id);
+  }
 }

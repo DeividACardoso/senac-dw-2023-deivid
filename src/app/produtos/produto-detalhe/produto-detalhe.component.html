@@ -8,7 +8,7 @@
               <h5>Cadastro</h5>
             </div>
             <div class="card-body card-info">
-              <form class="row alight-items-start">
+              <form class="row align-items-start">
                 <div class="row">
                   <div class="form-group col col-md-6">
                     <label for="nome" class="text-white">Nome</label>
@@ -17,32 +17,41 @@
                   <div class="form-group col col-md-6">
                     <label for="nomeFabricante" class="text-white">Fabricante</label>
                     <select class="form-select" name="fabricanteDoProduto"
-                    [ngModelOptions]="{standalone: true}"
-                    aria-label="Seleciona Um fabricante"
-                    [compareWith]="CompareById"
-                    [(ngModel)]="produto.fabricanteDoProduto">
-                    <option *ngFor="let fabricante of fabricantes" [ngValue]="fabricante">{{fabricante.nome}}</option>
-                  </select>
-                  <div class="form-group col col-md-6">
+                        [ngModelOptions]="{standalone: true}"
+                        aria-label="Selecione um fabricante"
+                        [compareWith]="compareById"
+                        [(ngModel)]="produto.fabricante">
+                        <option *ngFor="let fabricante of fabricantes"
+                        [ngValue]="fabricante">{{fabricante.nome}}</option>
+                    </select>
+                  </div>
+                  <div class="form-group col pt-2 col-md-6">
                     <label for="peso" class="text-white">Peso(Kg)</label>
-                    <input class="form-control" name="peso"
+                    <input class="form-control" type="number" name="peso"
                     [(ngModel)]="produto.peso">
                   </div>
-                  <div class="form-group col col-md-6">
+                  <div class="form-group col pt-2 col-md-6">
                     <label for="valor" class="text-white">Valor(R$)</label>
-                    <input class="form-control" name="valor">
-                  </div>
-                  <div class="row">
-                    <div class="form-group col col-md-4">
-                    </div>
-                    <div class="form-group col col-md-4">
-                    </div>
-                    <div class="form-group col pt-4 pl-4 col-md-4 ">
-                      <button type="sumbit" class="form-control btn btn-primary">Cadastrar</button>
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">R$</div>
+                      </div>
+                      <input type="number" class="form-control" name="valor" placeholder="Valor de venda de produto" [(ngModel)]="produto.valor">
                     </div>
                   </div>
                 </div>
-              </div>
+                <div class="row">
+                  <div class="form-group col col-md-6">
+                    <label for="dataCadastro" class="text-white">Data de cadastro</label>
+                    <input class="form-control" type="date" name="dataCadastro"[(ngModel)]="produto.dataCadastro">
+                  </div>
+                  <div class="form-group pt-4 col-md-3">
+                    <button type="sumbit" class="form-control btn btn-warning" (click)="voltar()">Voltar</button>
+                  </div>
+                  <div class="form-group pt-4 col-md-3 ">
+                    <button type="sumbit" class="form-control btn btn-primary" (click)="salvar()">Cadastrar</button>
+                  </div>
+                  </div>
             </form>
           </div>
         </div>

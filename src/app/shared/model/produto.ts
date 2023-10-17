@@ -3,7 +3,7 @@ import { Fabricante } from './fabricante';
 export class Produto {
   id: number;
   nome: string;
-  fabricanteDoProduto: Fabricante;
+  fabricante: Fabricante;
   peso: number;
   valor?: number;
   dataCadastro: Date;
