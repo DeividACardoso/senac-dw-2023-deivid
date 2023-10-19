@@ -1,10 +1,11 @@
 import { Produto } from 'src/app/shared/model/produto';
 import { FabricanteService } from './../../shared/service/fabricante.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Fabricante } from 'src/app/shared/model/fabricante';
 import { ProdutoService } from 'src/app/shared/service/produto.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-produto-detalhe',
@@ -16,6 +17,9 @@ export class ProdutoDetalheComponent  implements OnInit{
   public produto: Produto = new Produto();
   public fabricantes: Fabricante[] = [];
   public idProduto: number;
+
+  @ViewChild('ngForm')
+  public ngForm: NgForm;
 
   constructor(private produtoService : ProdutoService,
               private fabricanteService: FabricanteService,
@@ -52,29 +56,39 @@ export class ProdutoDetalheComponent  implements OnInit{
     );
   }
 
-public salvar(){
+public salvar(form: NgForm){
+  if(form.invalid){
+    Swal.fire("Erro", "Formulário inválido", 'error');
+    return;
+  }
+
   if(this.idProduto){
-    this.produtoService.atualizar(this.produto).subscribe(
-      sucesso => {
-        Swal.fire("Sucesso", "Produto atualizado!", 'success');
-        this.produto = new Produto();
-      },
-      erro => {
-        Swal.fire("Erro", "Erro ao atualizar o produto: " + erro, 'error');
-      }
-    );
+    this.atualizar();
   } else {
+    this.inserirProduto();
+  }
+}
+  inserirProduto() {
     this.produtoService.salvar(this.produto).subscribe(
       sucesso => {
-        Swal.fire('Sucesso', 'Produto Cadastrado!', 'success');
+        Swal.fire("Sucesso", "Produto salvo com sucesso", 'success');
         this.produto = new Produto();
       },
       erro => {
-        Swal.fire("Erro", "Erro ao cadastrar o produto: " + erro, 'error')
+        Swal.fire("Erro", "Não foi possivel salvar o produto: " + erro, 'error');
       }
     )
   }
-}
+  atualizar() {
+    this.produtoService.atualizar(this.produto).subscribe(
+      sucesso => {
+        Swal.fire("Sucesso", "Produto atualizado com sucesso", 'success');
+      },
+      erro => {
+        Swal.fire("Erro", "Não foi possivel atualizar o produto: " + erro, 'error');
+      }
+    );
+  }
 
 public voltar(){
   this.router.navigate(['/produtos/lista']);

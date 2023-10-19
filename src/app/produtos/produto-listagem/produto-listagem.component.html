@@ -15,35 +15,35 @@
                 </div>
                 <div class="form-group col col-md-4">
                   <label for="nomeFabricante" class="text-white">Nome do Fabricante</label>
-                  <input class="form-control" name="nomeFabricante" [(ngModel)]="seletor.nomeFabricante">
+                  <input class="form-control" name="nomeFabricante" [(ngModel)]="seletor.fabricanteNome">
                 </div>
                 <div class="form-group col col-md-4">
                   <label for="nomeFabricante" class="text-white">CNPJ do Fabricante</label>
                   <input class="form-control" name="nomeFabricante" [(ngModel)]="seletor.fabricanteCnpj">
                 </div>
                 <div class="form-group col col-md-3">
-                  <label for="nomeFabricante" class="text-white">Peso Minimo(Kg)</label>
-                  <input class="form-control" name="nomeFabricante" [(ngModel)]="seletor.pesoMinimo">
+                  <label for="pesoMinimo" class="text-white">Peso Minimo(Kg)</label>
+                  <input class="form-control" name="pesoMinimo" [(ngModel)]="seletor.pesoMinimo">
                 </div>
                 <div class="form-group col col-md-3">
-                  <label for="nomeFabricante" class="text-white">Peso Maximo(Kg)</label>
-                  <input class="form-control" name="nomeFabricante" [(ngModel)]="seletor.pesoMaximo">
+                  <label for="pesoMaximo" class="text-white">Peso Maximo(Kg)</label>
+                  <input class="form-control" name="pesoMaximo" [(ngModel)]="seletor.pesoMaximo">
                 </div>
                 <div class="form-group col col-md-3">
-                  <label for="nomeFabricante" class="text-white">Valor Minimo(R$)</label>
-                  <input class="form-control" name="nomeFabricante" [(ngModel)]="seletor.valorMinimo">
+                  <label for="valorMinimo" class="text-white">Valor Minimo(R$)</label>
+                  <input class="form-control" name="valorMinimo" [(ngModel)]="seletor.valorMinimo">
                 </div>
                 <div class="form-group col col-md-3">
-                  <label for="nomeFabricante" class="text-white">Valor Maximo(R$)</label>
-                  <input class="form-control" name="nomeFabricante" [(ngModel)]="seletor.valorMaximo">
+                  <label for="valorMaximo" class="text-white">Valor Maximo(R$)</label>
+                  <input class="form-control" name="valorMaximo" [(ngModel)]="seletor.valorMaximo">
                 </div>
                 <div class="form-group col col-md-3">
                   <label for="dataCadastro" class="text-white">Data minima de cadastro</label>
-                    <input class="form-control" type="date" name="dataCadastro" [(ngModel)]="seletor.dataCadastroInicial">
+                    <input class="form-control" type="date" name="dataCadastroInicial" [(ngModel)]="seletor.dataCadastroInicial">
                 </div>
                 <div class="form-group col col-md-3">
                   <label for="dataCadastro" class="text-white">Data maxima de cadastro</label>
-                    <input class="form-control" type="date" name="dataCadastro"  [(ngModel)]="seletor.dataCadastroFinal">
+                    <input class="form-control" type="date" name="dataCadastroFinal"  [(ngModel)]="seletor.dataCadastroFinal">
                 </div>
                 <div class="form-group col pt-4 col-md-3">
                   <button type="sumbit" class="form-control btn btn-warning mb-3" (click)="limpar()">Limpar</button>
